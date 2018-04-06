@@ -1,0 +1,44 @@
+{
+  "name": "kickstart-app",
+  "version": "0.0.1",
+  "description": "This is simple Frontend project boilerplate",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "gulp",
+    "starter"
+  ],
+  "config": {
+    "src": {
+      "sass": "src/scss",
+      "js": "src/js"
+    },
+    "build": {
+      "css": "build/css",
+      "js": "build/js"
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ],
+  "author": "Habibullah Nahid",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^8.2.0",
+    "browser-sync": "^2.23.6",
+    "browserify": "^16.1.1",
+    "gulp": "^3.9.1",
+    "gulp-postcss": "^7.0.1",
+    "gulp-sass": "^4.0.0",
+    "gulp-sourcemaps": "^2.6.4",
+    "require-dir": "^1.0.0",
+    "run-sequence": "^2.2.1",
+    "vinyl-source-stream": "^2.0.0"
+  },
+  "dependencies": {
+    "jquery": "^3.3.1"
+  }
+}
