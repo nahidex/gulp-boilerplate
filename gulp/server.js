@@ -1,11 +1,18 @@
 var gulp        = require('gulp');
-var browserSync = require('browser-sync').create();
+var server = require('browser-sync').create();
 
 gulp.task('server', function() {
-    browserSync.init({
+    server.init({
         server: {
             baseDir: "./build"
         },
-        files: ['build/*.html','build/css/*.css', 'build/js/*.js', 'build/img/*.*']
+        files: [
+            'build/*.html',
+            'build/css/*.css',
+            'build/img/*.*'
+        ]
     });
 });
+
+
+module.exports = server;
