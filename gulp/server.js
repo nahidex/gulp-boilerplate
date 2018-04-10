@@ -2,9 +2,13 @@ var gulp        = require('gulp');
 var server = require('browser-sync').create();
 
 gulp.task('server', function() {
-    server.init({
+    return server.init({
         server: {
-            baseDir: "./build"
+            baseDir: "./build",
+            directory: false,
+            serveStaticOptions: {
+                extensions: ['html']
+            }
         },
         files: [
             'build/*.html',

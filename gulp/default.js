@@ -5,10 +5,7 @@ gulp.task('default', function() {
 	runSequence(
 		'copy',
 		'sass',
-		'webpack',
-		'server',
-		'copy:watch',
-		'sass:watch',
-		'webpack:watch'
+		'watch',
+		'server'
 	);
 })

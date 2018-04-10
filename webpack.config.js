@@ -1,8 +1,12 @@
 var webpack = require('webpack');
 var path = require('path');
 var config = require('./package.json').config;
+var BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+var env = process.env.NODE_ENV || 'development';
+
 
 var webpackConfig = {
+    mode: env,
     context: path.join(__dirname, config.src.js),
     entry: {
         app: './app.js'
@@ -12,7 +16,20 @@ var webpackConfig = {
         filename: '[name].js',
         publicPath: 'js/'
     },
-    plugins: [],
+    plugins: [
+        new webpack.ProvidePlugin({
+            $: "jquery",
+            jQuery: "jquery",
+            'window.jQuery': "jquery"
+        }),
+        new webpack.NoEmitOnErrorsPlugin(),
+
+        new BundleAnalyzerPlugin({
+            analyzerMode: 'static',
+            analyzerPort: 4000,
+            openAnalyzer: false
+        })
+    ],
     module: {
         rules: [{
             test: /\.js$/,

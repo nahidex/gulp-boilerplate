@@ -12,12 +12,16 @@
   ],
   "config": {
     "src": {
+      "root": "src",
       "sass": "src/scss",
-      "js": "src/js"
+      "js": "src/js",
+      "img": "src/img"
     },
     "build": {
+      "root": "build",
       "css": "build/css",
-      "js": "build/js"
+      "js": "build/js",
+      "img": "build/img"
     }
   },
   "browserslist": [
@@ -38,7 +42,11 @@
     "gulp-sourcemaps": "^2.6.4",
     "require-dir": "^1.0.0",
     "run-sequence": "^2.2.1",
-    "webpack": "^4.5.0"
+    "webpack": "^4.5.0",
+    "webpack-bundle-analyzer": "^2.11.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "sequencejs": "^2.0.0"
+  }
 }

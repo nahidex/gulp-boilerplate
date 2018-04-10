@@ -9,12 +9,12 @@ var autoprefixer = require('autoprefixer');
 gulp.task('sass', function () {
   return gulp.src( config.src.sass + '/**/*.{scss,sass}')
     .pipe(sass().on('error', sass.logError))
-	.pipe(sourcemaps.init())
-	.pipe(postcss([ autoprefixer() ]))
-	.pipe(sourcemaps.write('.'))
+    .pipe(sourcemaps.init())
+    .pipe(postcss([ autoprefixer() ]))
+    .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(config.build.css));
 });
- 
+
 gulp.task('sass:watch', function () {
   gulp.watch(config.src.sass + '/**/*.{scss,sass}', ['sass']);
 });
